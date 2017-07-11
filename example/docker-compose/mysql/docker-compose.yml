@@ -20,6 +20,9 @@ services:
       MEDIAWIKI_ENABLE_UPLOADS: 1
       MEDIAWIKI_ENABLE_VISUAL_EDITOR: 1
       MEDIAWIKI_DEFAULT_SKIN: vector
+      MEDIAWIKI_ENABLE_EMBED_VIDEO: 1
+      MEDIAWIKI_ENABLE_UPLOADS: 1
+      MEDIAWIKI_FILE_EXTENSIONS: png,gif,jpg,jpeg,webp,webm,mp4,avi
     ports:
     - "8080:80"
     links:

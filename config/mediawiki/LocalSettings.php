@@ -215,5 +215,10 @@ if (getenv('MEDIAWIKI_EXTENSION_USER_MERGE_ENABLED') == ''
     $wgUserMergeProtectedGroups = array();
 }
 
+if (getenv('MEDIAWIKI_EXTENSION_EMBED_VIDEO_ENABLED') == ''
+|| getenv('MEDIAWIKI_EXTENSION_EMBED_VIDEO_ENABLED') == '1') {
+    wfLoadExtension('EmbedVideo');
+}
+
 # Load extra settings
 require 'ExtraLocalSettings.php';

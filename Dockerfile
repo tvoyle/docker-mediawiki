@@ -110,6 +110,12 @@ ADD https://extdist.wmflabs.org/dist/extensions/UserMerge-$EXTENSION_USERMERGE_V
 RUN tar -xzf /tmp/extension-usermerge.tar.gz -C /var/www/mediawiki/extensions && \
     rm /tmp/extension-usermerge.tar.gz
 
+# EmbedVideo extension
+ARG EXTENSION_EMBEDVIDEO_VERSION=v2.7.0
+ADD https://github.com/HydraWiki/mediawiki-embedvideo/archive/$EXTENSION_EMBEDVIDEO_VERSION.tar.gz /tmp/extension-embedvideo.tar.gz
+RUN tar -xzf /tmp/extension-embedvideo.tar.gz -C /var/www/mediawiki/extensions && \
+    rm /tmp/extension-embedvideo.tar.gz
+
 # Set work dir
 WORKDIR /var/www/mediawiki
 
